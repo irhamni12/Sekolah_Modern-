@@ -1,0 +1,27 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
+
+collections:
+  - name: "home"
+    label: "Beranda"
+    files:
+      - label: "Konten Utama"
+        name: "main"
+        file: "content/home.md"
+        fields:
+          - { label: "Judul", name: "title", widget: "string" }
+          - { label: "Subjudul", name: "subtitle", widget: "string" }
+          - { label: "Gambar", name: "image", widget: "image" }
+  - name: "profile"
+    label: "Profil Sekolah"
+    files:
+      - label: "Visi dan Misi"
+        name: "vision_mission"
+        file: "content/profile.md"
+        fields:
+          - { label: "Visi", name: "vision", widget: "text" }
+          - { label: "Misi", name: "mission", widget: "list" }
